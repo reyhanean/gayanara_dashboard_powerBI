@@ -163,26 +163,23 @@ Periode Januari 2022 sampai Februari 2025.
 
 | Halaman 1: Ringkasan Penjualan | Halaman 2: Pelanggan & Ulasan |
 |---|---|
-| ![Halaman 1](screenshots/halaman-1.png) | ![Halaman 2](screenshots/halaman-2.png) |
+| ![Halaman 1](/halaman-1.png) | ![Halaman 2](/halaman-2.png) |
 
 ---
 
 ## Struktur Repositori
 
-```
-gayanara-dashboard/
+gayanara_dashboard_powerBI/
 ├── gayanara_dashboard.pbix
-├── data/
-│   ├── customers.csv
-│   ├── orders.csv
-│   ├── order_items.csv
-│   ├── products.csv
-│   └── reviews.csv
-├── screenshots/
-│   ├── halaman-1.png
-│   └── halaman-2.png
-└── README.md
-```
+├── README.md
+├── customers.csv
+├── orders.csv
+├── order_items.csv
+├── products.csv
+├── reviews.csv
+├── halaman-1.png
+├── halaman-2.png
+└── model-data.png
 
 ## Cara Membuka
 
