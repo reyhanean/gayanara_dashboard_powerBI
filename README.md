@@ -6,6 +6,18 @@ Dashboard interaktif dua halaman yang dibuat dengan **Power BI Desktop** untuk m
 
 ---
 
+## Tampilan Dashboard
+
+**Halaman 1: Ringkasan Penjualan**
+
+![Halaman 1](halaman-1.png)
+
+**Halaman 2: Pelanggan & Ulasan**
+
+![Halaman 2](halaman-2.png)
+
+---
+
 ## Tujuan Analisis
 
 Dashboard ini menjawab pertanyaan bisnis berikut:
@@ -21,15 +33,15 @@ Dashboard ini menjawab pertanyaan bisnis berikut:
 
 ## Dataset
 
-Lima tabel dalam satu folder (`gayanara`):
+Lima file CSV yang ada di repositori ini:
 
-| Tabel | Isi | Kolom penting |
+| File | Isi | Kolom penting |
 |---|---|---|
-| `customers` | Data pelanggan | `customer_id`, `gender`, `age_group`, `city`, `province` |
-| `orders` | Data pesanan | `order_id`, `customer_id`, `order_date`, `order_status`, `payment_method`, `courier`, `promo_code`, `shipping_city` |
-| `order_items` | Rincian barang per pesanan | `order_id`, `product_id`, `quantity`, `unit_price_idr`, `subtotal_idr` |
-| `products` | Katalog produk | `product_id`, `category`, `sub_category`, `brand`, `price_idr` |
-| `reviews` | Ulasan pelanggan | `review_id`, `product_id`, `customer_id`, `rating`, `review_date` |
+| `customers.csv` | Data pelanggan | `customer_id`, `gender`, `age_group`, `city`, `province` |
+| `orders.csv` | Data pesanan | `order_id`, `customer_id`, `order_date`, `order_status`, `payment_method`, `courier`, `promo_code`, `shipping_city` |
+| `order_items.csv` | Rincian barang per pesanan | `order_id`, `product_id`, `quantity`, `unit_price_idr`, `subtotal_idr` |
+| `products.csv` | Katalog produk | `product_id`, `category`, `sub_category`, `brand`, `price_idr` |
+| `reviews.csv` | Ulasan pelanggan | `review_id`, `product_id`, `customer_id`, `rating`, `review_date` |
 
 Cakupan data: **3.000 pesanan**, Januari 2022 sampai Februari 2025.
 
@@ -39,7 +51,7 @@ Cakupan data: **3.000 pesanan**, Januari 2022 sampai Februari 2025.
 
 - **Power BI Desktop**: pemodelan data dan visualisasi
 - **DAX**: pembuatan measure
-- **Excel / CSV**: sumber data
+- **CSV**: sumber data
 
 ---
 
@@ -56,6 +68,8 @@ Kelima tabel dihubungkan dengan relasi *one-to-many*:
 - `customers` → `reviews`
 
 Semua measure disimpan dalam satu tabel khusus bernama `_MEASURE` supaya rapi.
+
+![Model data](model-data.png)
 
 ### 2. Aturan bisnis
 
@@ -159,33 +173,28 @@ Periode Januari 2022 sampai Februari 2025.
 
 ---
 
-## Screenshot
+## Isi Repositori
 
-| Halaman 1: Ringkasan Penjualan | Halaman 2: Pelanggan & Ulasan |
-|---|---|
-| ![Halaman 1](/halaman-1.png) | ![Halaman 2](/halaman-2.png) |
-
----
-
-## Struktur Repositori
-
+```
 gayanara_dashboard_powerBI/
-├── gayanara_dashboard.pbix
+├── gayanara_dashboard.pbix   # file dashboard Power BI
 ├── README.md
 ├── customers.csv
 ├── orders.csv
 ├── order_items.csv
 ├── products.csv
 ├── reviews.csv
-├── halaman-1.png
-├── halaman-2.png
-└── model-data.png
+├── halaman-1.png             # screenshot halaman 1
+├── halaman-2.png             # screenshot halaman 2
+└── model-data.png            # screenshot model data
+```
 
 ## Cara Membuka
 
 1. Unduh dan pasang [Power BI Desktop](https://powerbi.microsoft.com/desktop) (gratis, khusus Windows).
-2. Unduh repositori ini, lalu buka `gayanara_dashboard.pbix`.
-3. Jika muncul pesan data tidak ditemukan: **Home → Transform data → Data source settings → Change Source**, lalu arahkan ke folder `data/` di komputer kamu.
+2. Di halaman repositori ini, klik **Code → Download ZIP**, lalu ekstrak. Pastikan file `.pbix` dan kelima file CSV berada di folder yang sama.
+3. Buka `gayanara_dashboard.pbix`.
+4. Jika muncul pesan data tidak ditemukan: **Home → Transform data → Data source settings → Change Source**, lalu arahkan tiap sumber ke file CSV di folder hasil ekstrak, kemudian klik **Refresh**.
 
 ---
 
@@ -211,5 +220,5 @@ gayanara_dashboard_powerBI/
 **Muhamad Rayhan**
 Mahasiswa Teknik Informatika yang sedang mendalami analisis data.
 
-- GitHub: [username-kamu](https://github.com/username-kamu)
-- LinkedIn: [nama-kamu](https://linkedin.com/in/nama-kamu)
+- GitHub: [reyhanean](https://github.com/reyhanean)
+- LinkedIn: [Muhamad Rayhan](https://linkedin.com/in/muhamad-rayhan-182432237)
